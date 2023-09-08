@@ -69,3 +69,7 @@ const form = document.getElementById('registrationForm');
          return 0; 
      } 
    }
+
+   function ShowBook(){
+    alert("Booking Confirmed");
+   }
