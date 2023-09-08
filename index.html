@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+   <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <title>Hotels Booking Form</title> 
+   <link rel="stylesheet" href="style.css"> 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
+     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" 
+     crossorigin="anonymous"></script> 
+      <link rel="preconnect" href="https://fonts.googleapis.com">  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
+ <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">  
+
+ </head> 
+  
+ <body class="bg-primary"> 
+    <div class="d-flex justify-content-center align-items-center align-items-center my-5 "> 
+        <div class="card w-75  shadow-lg "> 
+          <div class="card-header shadow-lg bg-danger text-center"> 
+            <h3 class="text">Hotel Booking Form</h3> 
+          </div> 
+          <div class="card-body p-5 border shadow-lg"> 
+            <form id="registrationForm"> 
+              <div class="mb-3 fw-bold"> 
+                <label  for="name">Name:</label> 
+                <input class="form-control" placeholder="Enter Name" type="text" id="name" name="name" required> 
+              </div> 
+              <div class="mb-3 fw-bold"> 
+                <label for="checkInDate">Check-in Date:</label> 
+                <input type="date" class="form-control" id="checkInDate" name="checkInDate" required> 
+              </div> 
+              <div class="mb-3 fw-bold"> 
+                <label for="totalPersons">Number of Persons:</label> 
+                <input type="number" class="form-control" id="totalPersons" name="totalPersons" min="1" required> 
+              </div> 
+              <div class="mb-3 fw-bold"> 
+                <label for="totalDays">Number of Days:</label> 
+                <input type="number" class="form-control" id="totalDays" name="totalDays" min="1" required> 
+              </div> 
+     
+              <div class="mb-3 fw-bold"> 
+                <label for="roomType">Room Type:</label> 
+                <select id="roomType" name="roomType" required class="form-control"> 
+                  <option value="">Select Room Type</option> 
+                  <option value="delux">Delux (2500/-)</option> 
+                  <option value="suite">Suite (4000/-)</option> 
+                </select> 
+              </div> 
+     
+              <div class="mb-3 d-flex fw-bold"> 
+                <label class="mb-3" >Amenities :</label> 
+                <div class="mx-5"> 
+                  <label><input type="checkbox" class="form-check-input" name="amenities" value="AC"> AC (1000/-)</label> 
+                </div> 
+                <div class="mx-5" > 
+                  <label ><input type="checkbox" class="form-check-input" name="amenities" value="Locker">Locker (300/-)</label> 
+                </div> 
+              </div> 
+   
+              <!-- <div class="mb-3 fw-bold"> 
+               <label>Total Amount: </label> 
+               <span id="totalAmount" class="amount text-decoration-underline text-secondary"></span> 
+             </div>  -->
+     
+              <div class="mb-3 fw-bold"> 
+                <label for="advancePayment">Advance Payment:</label> 
+                <input type="number" class="form-control" id="advancePayment" name="advancePayment" min="1000" placeholder="(minimum : 1000)" required> 
+              </div> 
+     
+     
+     
+              <div class="mb-3 fw-bold"> 
+                <label>Room Cost: </label> 
+                <span id="roomCost" class="amount text-decoration-underline text-secondary"></span> 
+              </div> 
+     
+              <div class="mb-3 fw-bold"> 
+                <label>Amenities Cost:</label> 
+                <span id="amenitiesCost" class="amount text-decoration-underline text-secondary"></span> 
+              </div> 
+     
+              <div class="mb-3 fw-bold"> 
+                <label>Extra Persons Cost :</label> 
+                <span id="extraPersonsCost" class="amount text-decoration-underline text-secondary"></span> 
+              </div> 
+              <div class="mb-3 fw-bold"> 
+                <label>Total Amount: </label> 
+                <span id="totalAmount" class="amount text-decoration-underline text-secondary"></span> 
+              </div> 
+     
+              <div class="mb-5 fw-bold"> 
+                <label>Remaining Amount: </label>  
+                <span id="balanceAmount" class="amount text-decoration-underline text-secondary"></span> 
+              </div> 
+     
+              <div class=" mb-3 text-center "> 
+                <button class="btn btn-primary w-100 fw-bold fs-5" type="submit">Show Cost</button> 
+              </div> 
+            </form> 
+          </div> 
+     
+        </div> 
+      </div> 
+   
+  
+   <script src="script.js"></script> 
+  
+ </body> 
+  
+ </html>
